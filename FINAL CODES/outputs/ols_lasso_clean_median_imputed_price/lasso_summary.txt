@@ -1,0 +1,355 @@
+Lasso: cleaned model with median-imputed price_range, excluding review length, tip compliment, and ZIP dummies
+Input file: outputs\philadelphia_no_review_category_attribute_dummy_features_with_log_review_count_price_range.csv
+Included review exception: log_review_count
+Median price_range used for imputation: 2.00000
+Added indicator: price_range_missing
+Cleaned by dropping exact duplicates, constants, one-hot reference levels, and remaining rank-dependent columns.
+Preprocessing: StandardScaler before LassoCV
+CV folds: 10
+Chosen alpha: 0.00268254
+Selected nonzero predictors: 150
+Rows used: 5,854
+Train rows: 4,683
+Test rows: 1,171
+Initial candidate predictors: 181
+Final predictors used: 179
+Dropped columns: 17
+
+Metrics:
+split  rows  r_squared    rmse     mae
+train  4683    0.37311 0.63621 0.49824
+ test  1171    0.29483 0.67213 0.52684
+
+Predictors:
+- latitude
+- longitude
+- is_open
+- log_review_count
+- price_range
+- has_takeout
+- has_delivery
+- number_of_categories
+- tip_count
+- avg_tip_length
+- checkin_count
+- active_checkin_days
+- photo_count
+- avg_image_brightness
+- avg_image_saturation
+- food_photo_share
+- inside_photo_share
+- outside_photo_share
+- drink_photo_share
+- menu_photo_share
+- cat_food
+- cat_nightlife
+- cat_bars
+- cat_sandwiches
+- cat_pizza
+- cat_american_new
+- cat_breakfast_brunch
+- cat_american_traditional
+- cat_coffee_tea
+- cat_italian
+- cat_chinese
+- cat_fast_food
+- cat_burgers
+- cat_seafood
+- cat_cafes
+- cat_mexican
+- cat_delis
+- cat_event_planning_services
+- cat_salad
+- cat_specialty_food
+- cat_chicken_wings
+- cat_bakeries
+- cat_japanese
+- cat_asian_fusion
+- cat_vegetarian
+- cat_caterers
+- cat_desserts
+- cat_sushi_bars
+- cat_mediterranean
+- cat_cheesesteaks
+- cat_pubs
+- cat_cocktail_bars
+- cat_vegan
+- cat_beer
+- cat_vietnamese
+- cat_barbeque
+- cat_diners
+- cat_juice_bars_smoothies
+- cat_sports_bars
+- cat_lounges
+- cat_grocery
+- cat_indian
+- cat_middle_eastern
+- cat_food_trucks
+- cat_thai
+- cat_arts_entertainment
+- cat_food_delivery_services
+- cat_caribbean
+- cat_steakhouses
+- cat_soul_food
+- cat_korean
+- cat_soup
+- cat_gastropubs
+- cat_venues_event_spaces
+- cat_french
+- cat_food_stands
+- cat_ethnic_food
+- cat_wine_bars
+- cat_halal
+- cat_convenience_stores
+- cat_latin_american
+- cat_comfort_food
+- cat_chicken_shop
+- cat_beer_bar
+- cat_ice_cream_frozen_yogurt
+- attr_restaurantstakeout_missing
+- attr_restaurantsdelivery_missing
+- attr_businessacceptscreditcards
+- attr_businessacceptscreditcards_missing
+- attr_outdoorseating
+- attr_outdoorseating_missing
+- attr_restaurantsreservations
+- attr_restaurantsreservations_missing
+- attr_restaurantsgoodforgroups
+- attr_restaurantsgoodforgroups_missing
+- attr_hastv
+- attr_hastv_missing
+- attr_goodforkids
+- attr_goodforkids_missing
+- attr_bikeparking
+- attr_bikeparking_missing
+- attr_caters
+- attr_caters_missing
+- attr_restaurantstableservice
+- attr_restaurantstableservice_missing
+- attr_happyhour
+- attr_happyhour_missing
+- attr_wheelchairaccessible
+- attr_wheelchairaccessible_missing
+- attr_dogsallowed
+- attr_dogsallowed_missing
+- attr_businessacceptsbitcoin
+- attr_businessacceptsbitcoin_missing
+- attr_corkage
+- attr_corkage_missing
+- attr_byob
+- attr_byob_missing
+- attr_goodfordancing
+- attr_goodfordancing_missing
+- attr_coatcheck
+- attr_coatcheck_missing
+- attr_alcohol_beer_and_wine
+- attr_alcohol_full_bar
+- attr_alcohol_none
+- attr_restaurantsattire_casual
+- attr_restaurantsattire_dressy
+- attr_wifi_free
+- attr_wifi_no
+- attr_noiselevel_average
+- attr_noiselevel_loud
+- attr_noiselevel_quiet
+- attr_noiselevel_very_loud
+- attr_byobcorkage_no
+- attr_byobcorkage_yes_free
+- attr_smoking_no
+- attr_smoking_outdoor
+- attr_businessparking_garage
+- attr_businessparking_street
+- attr_businessparking_validated
+- attr_businessparking_lot
+- attr_businessparking_valet
+- attr_ambience_touristy
+- attr_ambience_hipster
+- attr_ambience_romantic
+- attr_ambience_divey
+- attr_ambience_intimate
+- attr_ambience_trendy
+- attr_ambience_upscale
+- attr_ambience_classy
+- attr_ambience_casual
+- attr_goodformeal_dessert
+- attr_goodformeal_latenight
+- attr_goodformeal_lunch
+- attr_goodformeal_dinner
+- attr_goodformeal_brunch
+- attr_goodformeal_breakfast
+- attr_music_dj
+- attr_music_background_music
+- attr_music_jukebox
+- attr_music_live
+- attr_music_video
+- attr_music_karaoke
+- attr_bestnights_monday
+- attr_bestnights_tuesday
+- attr_bestnights_friday
+- attr_bestnights_wednesday
+- attr_bestnights_thursday
+- attr_bestnights_sunday
+- attr_bestnights_saturday
+- has_hours
+- open_monday
+- open_tuesday
+- open_wednesday
+- open_thursday
+- open_friday
+- open_saturday
+- open_sunday
+- open_weekend
+- price_range_missing
+
+Selected predictors by absolute scaled coefficient:
+                                   term  scaled_coefficient  unscaled_coefficient
+                          cat_fast_food            -0.14084              -0.57786
+        attr_businessacceptscreditcards            -0.12178              -0.31000
+                    price_range_missing             0.11205               0.30670
+                              has_hours             0.10714               0.28301
+                              cat_pizza            -0.09167              -0.26740
+            attr_businessparking_street             0.08613               0.17290
+                            open_sunday            -0.08591              -0.18599
+                            open_monday            -0.08196              -0.17804
+attr_businessacceptscreditcards_missing            -0.07830              -0.26783
+                            cat_burgers            -0.07520              -0.31149
+                         cat_coffee_tea            -0.07276              -0.24376
+                   number_of_categories             0.07101               0.02958
+                       log_review_count             0.06215               0.04699
+                      cat_chicken_wings            -0.06115              -0.30171
+                       attr_bikeparking             0.05490               0.10980
+               attr_goodforkids_missing             0.05277               0.12623
+                            open_friday             0.05273               0.13693
+                              longitude             0.05078               0.97929
+              attr_noiselevel_very_loud            -0.05049              -0.35630
+      attr_wheelchairaccessible_missing            -0.04868              -0.11395
+                     inside_photo_share             0.04547               0.15418
+                           has_delivery            -0.04525              -0.09189
+                           open_tuesday            -0.04471              -0.10296
+   attr_restaurantstableservice_missing            -0.04418              -0.09271
+                              cat_vegan             0.04281               0.26156
+                    attr_caters_missing             0.04228               0.08861
+                               latitude            -0.04006              -0.82655
+               cat_american_traditional            -0.03904              -0.12272
+                       food_photo_share             0.03770               0.09439
+                  attr_alcohol_full_bar            -0.03712              -0.08700
+                        cat_food_trucks             0.03562               0.25805
+                            attr_caters             0.03488               0.07254
+                          cat_soul_food            -0.03371              -0.26342
+                attr_goodformeal_dinner             0.03325               0.07898
+                          cat_nightlife            -0.03263              -0.08533
+                             cat_diners            -0.03256              -0.21595
+                     cat_specialty_food             0.03251               0.15364
+            attr_outdoorseating_missing            -0.03083              -0.08183
+                              cat_cafes             0.03054               0.13336
+          attr_restaurantsattire_casual            -0.03021              -0.06762
+                         attr_happyhour            -0.03020              -0.08094
+                        cat_ethnic_food            -0.02945              -0.24099
+                              cat_delis             0.02899               0.13018
+                            cat_lounges            -0.02889              -0.20187
+                    attr_byobcorkage_no            -0.02790              -0.15004
+                            photo_count             0.02779               0.00310
+                     attr_music_jukebox             0.02635               0.28288
+                         cat_vietnamese             0.02616               0.17591
+                   attr_noiselevel_loud            -0.02571              -0.11226
+                            cat_chinese            -0.02549              -0.09415
+                               cat_food             0.02414               0.05185
+                   attr_ambience_casual             0.02325               0.04866
+                 attr_happyhour_missing            -0.02247              -0.05150
+                        cat_steakhouses            -0.01893              -0.14099
+                   avg_image_brightness            -0.01863              -0.06491
+                 attr_ambience_intimate             0.01853               0.11922
+                             cat_korean             0.01842               0.13879
+                         avg_tip_length            -0.01821              -0.00278
+                       menu_photo_share             0.01804               0.25772
+              attr_wheelchairaccessible            -0.01786              -0.04581
+                   attr_ambience_classy             0.01760               0.05121
+                               cat_soup            -0.01714              -0.13935
+                       attr_dogsallowed             0.01712               0.09127
+              attr_byobcorkage_yes_free            -0.01672              -0.08228
+                       cat_american_new            -0.01653              -0.04939
+                  attr_noiselevel_quiet             0.01530               0.04577
+                               cat_pubs             0.01527               0.08934
+                        cat_food_stands             0.01509               0.11717
+                         attr_wifi_free            -0.01495              -0.03145
+                           attr_wifi_no            -0.01452              -0.03018
+               attr_dogsallowed_missing            -0.01363              -0.03436
+                            price_range            -0.01362              -0.02452
+                        attr_music_live            -0.01336              -0.10715
+                         cat_gastropubs             0.01240               0.09755
+            attr_businessparking_garage            -0.01228              -0.05135
+                            cat_mexican            -0.01218              -0.05460
+               attr_bikeparking_missing             0.01182               0.02475
+             attr_goodformeal_latenight            -0.01169              -0.05853
+               attr_businessparking_lot            -0.01155              -0.03357
+                   attr_ambience_trendy             0.01146               0.04986
+                       cat_chicken_shop            -0.01120              -0.09726
+                       attr_goodforkids             0.01081               0.02189
+                           cat_beer_bar             0.01080               0.09232
+                      cat_mediterranean             0.01068               0.05881
+  attr_restaurantsgoodforgroups_missing            -0.01059              -0.02601
+                cat_venues_event_spaces            -0.01016              -0.07991
+                             cat_french             0.01006               0.08011
+                     cat_latin_american             0.01003               0.08779
+            cat_event_planning_services            -0.00998              -0.04508
+                        cat_sports_bars            -0.00989              -0.06912
+                            cat_seafood            -0.00959              -0.03977
+                 cat_arts_entertainment            -0.00912              -0.06571
+                          checkin_count             0.00891               0.00002
+                          cat_caribbean            -0.00831              -0.06259
+                            cat_italian             0.00783               0.02808
+           attr_restaurantsreservations            -0.00739              -0.01617
+                             cat_indian            -0.00733              -0.05223
+                         cat_sandwiches             0.00676               0.01846
+                         attr_coatcheck            -0.00668              -0.05463
+                          cat_wine_bars            -0.00656              -0.05298
+                attr_bestnights_tuesday             0.00654               0.06128
+                              cat_halal             0.00638               0.05081
+                         open_wednesday            -0.00630              -0.01570
+                      attr_byob_missing            -0.00608              -0.02310
+                attr_goodformeal_brunch             0.00606               0.02803
+                           cat_caterers             0.00601               0.03341
+                      attr_alcohol_none             0.00596               0.01192
+                          attr_music_dj            -0.00583              -0.07194
+                  attr_ambience_hipster             0.00562               0.03444
+               attr_bestnights_saturday            -0.00561              -0.02540
+                      cat_cocktail_bars             0.00556               0.03400
+             attr_goodformeal_breakfast             0.00524               0.02422
+                 attr_ambience_romantic             0.00519               0.03761
+               cat_juice_bars_smoothies            -0.00512              -0.03428
+                              cat_salad            -0.00498              -0.02355
+                 cat_convenience_stores            -0.00490              -0.04125
+                 attr_bestnights_sunday             0.00477               0.04839
+                    attr_ambience_divey             0.00474               0.03186
+                        attr_smoking_no            -0.00461              -0.02067
+               attr_goodformeal_dessert             0.00461               0.03237
+                         cat_vegetarian             0.00458               0.02448
+                       cat_asian_fusion            -0.00457              -0.02333
+                   attr_corkage_missing            -0.00415              -0.01434
+                       cat_cheesesteaks            -0.00409              -0.02366
+                 attr_bestnights_monday             0.00406               0.04308
+             attr_alcohol_beer_and_wine            -0.00400              -0.02105
+                              attr_byob             0.00390               0.02307
+                 attr_goodformeal_lunch             0.00386               0.00945
+                       cat_comfort_food             0.00375               0.03233
+              attr_bestnights_wednesday             0.00373               0.02700
+                            cat_grocery             0.00353               0.02454
+   attr_restaurantsreservations_missing             0.00335               0.00874
+            attr_goodfordancing_missing            -0.00319              -0.01218
+                     attr_hastv_missing            -0.00318              -0.00764
+                  attr_ambience_upscale            -0.00314              -0.04075
+                           cat_desserts             0.00286               0.01610
+                      drink_photo_share             0.00269               0.02303
+            cat_ice_cream_frozen_yogurt             0.00261               0.02318
+           attr_restaurantstableservice             0.00257               0.00623
+                   cat_breakfast_brunch            -0.00212              -0.00661
+                 attr_bestnights_friday             0.00209               0.00939
+            attr_music_background_music             0.00203               0.02843
+                 attr_ambience_touristy            -0.00189              -0.02547
+             attr_businessparking_valet            -0.00180              -0.01390
+                          open_saturday             0.00117               0.00286
+                attr_noiselevel_average             0.00111               0.00223
+             cat_food_delivery_services            -0.00104              -0.00794
+                           cat_japanese             0.00085               0.00441
+               attr_bestnights_thursday             0.00056               0.00305
+                               cat_beer            -0.00012              -0.00081

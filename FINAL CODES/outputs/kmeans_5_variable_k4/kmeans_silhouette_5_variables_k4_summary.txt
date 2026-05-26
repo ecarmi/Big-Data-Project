@@ -1,0 +1,18 @@
+K-means with 5 variables and k=4
+Input file: outputs\philadelphia_no_review_category_attribute_dummy_features_with_log_review_count_price_range.csv
+Output file: outputs\kmeans_5_variable_k4\kmeans_silhouette_5_variables_k4_clustered.csv
+Features: log_review_count, avg_tip_compliments, checkin_count, photo_count, inside_photo_share
+Dropped photo_file_count because it duplicates photo_count in this dataset
+Clusters: 4
+Rows used: 5,854
+Rows skipped for missing features: 0
+Silhouette score: 0.47848
+Star-group majority accuracy: 0.46481
+Cluster to star-group mapping: {0: 'high', 1: 'high', 2: 'high', 3: 'high'}
+
+Cluster summary:
+ kmeans_cluster  restaurant_count  avg_stars  avg_log_review_count  avg_tip_compliments  avg_checkin_count  avg_photo_count  avg_inside_photo_share  low_share  middle_share  high_share
+              0              4016    3.44808               3.26937              0.00462           65.90712          1.16833                 0.00956    0.37649       0.21439     0.40911
+              1              1597    3.78240               4.79666              0.01033          355.28616          6.53100                 0.52691    0.16468       0.26612     0.56919
+              2               178    3.98034               6.76984              0.01176         2202.65169         39.76404                 0.29069    0.03933       0.16854     0.79213
+              3                63    3.50794               3.20806              0.44498           52.98413          1.68254                 0.09682    0.34921       0.20635     0.44444

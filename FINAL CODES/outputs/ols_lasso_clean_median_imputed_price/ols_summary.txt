@@ -1,0 +1,405 @@
+OLS: cleaned model with median-imputed price_range, excluding review length, tip compliment, and ZIP dummies
+Input file: outputs\philadelphia_no_review_category_attribute_dummy_features_with_log_review_count_price_range.csv
+Included review exception: log_review_count
+Median price_range used for imputation: 2.00000
+Added indicator: price_range_missing
+Cleaned by dropping exact duplicates, constants, one-hot reference levels, and remaining rank-dependent columns.
+Rows used: 5,854
+Train rows: 4,683
+Test rows: 1,171
+Initial candidate predictors: 181
+Final predictors used: 179
+Dropped columns: 17
+
+Metrics:
+split  rows  r_squared    rmse     mae
+train  4683    0.37838 0.63353 0.49517
+ test  1171    0.28526 0.67667 0.53032
+
+Predictors:
+- latitude
+- longitude
+- is_open
+- log_review_count
+- price_range
+- has_takeout
+- has_delivery
+- number_of_categories
+- tip_count
+- avg_tip_length
+- checkin_count
+- active_checkin_days
+- photo_count
+- avg_image_brightness
+- avg_image_saturation
+- food_photo_share
+- inside_photo_share
+- outside_photo_share
+- drink_photo_share
+- menu_photo_share
+- cat_food
+- cat_nightlife
+- cat_bars
+- cat_sandwiches
+- cat_pizza
+- cat_american_new
+- cat_breakfast_brunch
+- cat_american_traditional
+- cat_coffee_tea
+- cat_italian
+- cat_chinese
+- cat_fast_food
+- cat_burgers
+- cat_seafood
+- cat_cafes
+- cat_mexican
+- cat_delis
+- cat_event_planning_services
+- cat_salad
+- cat_specialty_food
+- cat_chicken_wings
+- cat_bakeries
+- cat_japanese
+- cat_asian_fusion
+- cat_vegetarian
+- cat_caterers
+- cat_desserts
+- cat_sushi_bars
+- cat_mediterranean
+- cat_cheesesteaks
+- cat_pubs
+- cat_cocktail_bars
+- cat_vegan
+- cat_beer
+- cat_vietnamese
+- cat_barbeque
+- cat_diners
+- cat_juice_bars_smoothies
+- cat_sports_bars
+- cat_lounges
+- cat_grocery
+- cat_indian
+- cat_middle_eastern
+- cat_food_trucks
+- cat_thai
+- cat_arts_entertainment
+- cat_food_delivery_services
+- cat_caribbean
+- cat_steakhouses
+- cat_soul_food
+- cat_korean
+- cat_soup
+- cat_gastropubs
+- cat_venues_event_spaces
+- cat_french
+- cat_food_stands
+- cat_ethnic_food
+- cat_wine_bars
+- cat_halal
+- cat_convenience_stores
+- cat_latin_american
+- cat_comfort_food
+- cat_chicken_shop
+- cat_beer_bar
+- cat_ice_cream_frozen_yogurt
+- attr_restaurantstakeout_missing
+- attr_restaurantsdelivery_missing
+- attr_businessacceptscreditcards
+- attr_businessacceptscreditcards_missing
+- attr_outdoorseating
+- attr_outdoorseating_missing
+- attr_restaurantsreservations
+- attr_restaurantsreservations_missing
+- attr_restaurantsgoodforgroups
+- attr_restaurantsgoodforgroups_missing
+- attr_hastv
+- attr_hastv_missing
+- attr_goodforkids
+- attr_goodforkids_missing
+- attr_bikeparking
+- attr_bikeparking_missing
+- attr_caters
+- attr_caters_missing
+- attr_restaurantstableservice
+- attr_restaurantstableservice_missing
+- attr_happyhour
+- attr_happyhour_missing
+- attr_wheelchairaccessible
+- attr_wheelchairaccessible_missing
+- attr_dogsallowed
+- attr_dogsallowed_missing
+- attr_businessacceptsbitcoin
+- attr_businessacceptsbitcoin_missing
+- attr_corkage
+- attr_corkage_missing
+- attr_byob
+- attr_byob_missing
+- attr_goodfordancing
+- attr_goodfordancing_missing
+- attr_coatcheck
+- attr_coatcheck_missing
+- attr_alcohol_beer_and_wine
+- attr_alcohol_full_bar
+- attr_alcohol_none
+- attr_restaurantsattire_casual
+- attr_restaurantsattire_dressy
+- attr_wifi_free
+- attr_wifi_no
+- attr_noiselevel_average
+- attr_noiselevel_loud
+- attr_noiselevel_quiet
+- attr_noiselevel_very_loud
+- attr_byobcorkage_no
+- attr_byobcorkage_yes_free
+- attr_smoking_no
+- attr_smoking_outdoor
+- attr_businessparking_garage
+- attr_businessparking_street
+- attr_businessparking_validated
+- attr_businessparking_lot
+- attr_businessparking_valet
+- attr_ambience_touristy
+- attr_ambience_hipster
+- attr_ambience_romantic
+- attr_ambience_divey
+- attr_ambience_intimate
+- attr_ambience_trendy
+- attr_ambience_upscale
+- attr_ambience_classy
+- attr_ambience_casual
+- attr_goodformeal_dessert
+- attr_goodformeal_latenight
+- attr_goodformeal_lunch
+- attr_goodformeal_dinner
+- attr_goodformeal_brunch
+- attr_goodformeal_breakfast
+- attr_music_dj
+- attr_music_background_music
+- attr_music_jukebox
+- attr_music_live
+- attr_music_video
+- attr_music_karaoke
+- attr_bestnights_monday
+- attr_bestnights_tuesday
+- attr_bestnights_friday
+- attr_bestnights_wednesday
+- attr_bestnights_thursday
+- attr_bestnights_sunday
+- attr_bestnights_saturday
+- has_hours
+- open_monday
+- open_tuesday
+- open_wednesday
+- open_thursday
+- open_friday
+- open_saturday
+- open_sunday
+- open_weekend
+- price_range_missing
+
+Model summary:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  stars   R-squared:                       0.378
+Model:                            OLS   Adj. R-squared:                  0.354
+Method:                 Least Squares   F-statistic:                     15.40
+Date:                Mon, 25 May 2026   Prob (F-statistic):               0.00
+Time:                        23:43:18   Log-Likelihood:                -4507.4
+No. Observations:                4683   AIC:                             9373.
+Df Residuals:                    4504   BIC:                         1.053e+04
+Df Model:                         178                                         
+Covariance Type:            nonrobust                                         
+===========================================================================================================
+                                              coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------------------
+const                                     121.8384     23.985      5.080      0.000      74.815     168.861
+latitude                                   -0.8840      0.259     -3.408      0.001      -1.392      -0.376
+longitude                                   1.0996      0.227      4.836      0.000       0.654       1.545
+is_open                                     0.0064      0.024      0.267      0.789      -0.041       0.054
+log_review_count                            0.0520      0.018      2.951      0.003       0.017       0.086
+price_range                                -0.0367      0.024     -1.515      0.130      -0.084       0.011
+has_takeout                                 0.0102      0.041      0.251      0.802      -0.069       0.090
+has_delivery                               -0.0987      0.025     -3.970      0.000      -0.147      -0.050
+number_of_categories                        0.0474      0.012      4.107      0.000       0.025       0.070
+tip_count                                -3.78e-05      0.001     -0.039      0.969      -0.002       0.002
+avg_tip_length                             -0.0031      0.002     -1.967      0.049      -0.006   -1.02e-05
+checkin_count                            5.552e-05   6.55e-05      0.847      0.397    -7.3e-05       0.000
+active_checkin_days                     -8.536e-05      0.000     -0.742      0.458      -0.000       0.000
+photo_count                                 0.0034      0.002      2.219      0.027       0.000       0.006
+avg_image_brightness                       -0.4716      0.129     -3.653      0.000      -0.725      -0.218
+avg_image_saturation                       -0.1874      0.112     -1.667      0.096      -0.408       0.033
+food_photo_share                            0.4311      0.108      4.008      0.000       0.220       0.642
+inside_photo_share                          0.4145      0.089      4.633      0.000       0.239       0.590
+outside_photo_share                         0.2431      0.097      2.513      0.012       0.053       0.433
+drink_photo_share                           0.3369      0.125      2.698      0.007       0.092       0.582
+menu_photo_share                            0.6259      0.169      3.702      0.000       0.294       0.957
+cat_food                                    0.0524      0.037      1.399      0.162      -0.021       0.126
+cat_nightlife                              -0.2614      0.112     -2.337      0.020      -0.481      -0.042
+cat_bars                                    0.1308      0.114      1.149      0.251      -0.092       0.354
+cat_sandwiches                              0.0103      0.032      0.326      0.745      -0.052       0.072
+cat_pizza                                  -0.2971      0.035     -8.496      0.000      -0.366      -0.229
+cat_american_new                           -0.0747      0.034     -2.213      0.027      -0.141      -0.009
+cat_breakfast_brunch                       -0.0462      0.035     -1.303      0.193      -0.116       0.023
+cat_american_traditional                   -0.1467      0.035     -4.231      0.000      -0.215      -0.079
+cat_coffee_tea                             -0.2921      0.047     -6.210      0.000      -0.384      -0.200
+cat_italian                                 0.0240      0.040      0.606      0.545      -0.054       0.102
+cat_chinese                                -0.1320      0.042     -3.173      0.002      -0.214      -0.050
+cat_fast_food                              -0.5988      0.046    -12.937      0.000      -0.689      -0.508
+cat_burgers                                -0.3310      0.045     -7.428      0.000      -0.418      -0.244
+cat_seafood                                -0.0683      0.044     -1.561      0.119      -0.154       0.017
+cat_cafes                                   0.1302      0.047      2.765      0.006       0.038       0.222
+cat_mexican                                -0.0993      0.047     -2.091      0.037      -0.192      -0.006
+cat_delis                                   0.1187      0.050      2.386      0.017       0.021       0.216
+cat_event_planning_services                -0.2229      0.131     -1.702      0.089      -0.480       0.034
+cat_salad                                  -0.0662      0.050     -1.335      0.182      -0.163       0.031
+cat_specialty_food                          0.1406      0.063      2.243      0.025       0.018       0.263
+cat_chicken_wings                          -0.3214      0.052     -6.147      0.000      -0.424      -0.219
+cat_bakeries                               -0.0531      0.055     -0.963      0.336      -0.161       0.055
+cat_japanese                               -0.0015      0.063     -0.023      0.982      -0.125       0.122
+cat_asian_fusion                           -0.0604      0.055     -1.103      0.270      -0.168       0.047
+cat_vegetarian                              0.0305      0.061      0.503      0.615      -0.088       0.149
+cat_caterers                                0.1842      0.131      1.402      0.161      -0.073       0.442
+cat_desserts                               -0.0005      0.060     -0.009      0.993      -0.118       0.117
+cat_sushi_bars                             -0.0387      0.069     -0.562      0.574      -0.174       0.096
+cat_mediterranean                           0.0319      0.060      0.534      0.594      -0.085       0.149
+cat_cheesesteaks                           -0.0632      0.060     -1.056      0.291      -0.181       0.054
+cat_pubs                                    0.0911      0.068      1.344      0.179      -0.042       0.224
+cat_cocktail_bars                           0.0428      0.069      0.617      0.537      -0.093       0.179
+cat_vegan                                   0.2461      0.068      3.614      0.000       0.113       0.380
+cat_beer                                   -0.0718      0.079     -0.906      0.365      -0.227       0.084
+cat_vietnamese                              0.1666      0.068      2.446      0.014       0.033       0.300
+cat_barbeque                               -0.0356      0.067     -0.532      0.595      -0.167       0.096
+cat_diners                                 -0.2520      0.069     -3.665      0.000      -0.387      -0.117
+cat_juice_bars_smoothies                   -0.0966      0.070     -1.381      0.167      -0.234       0.041
+cat_sports_bars                            -0.1000      0.076     -1.311      0.190      -0.250       0.050
+cat_lounges                                -0.2279      0.078     -2.927      0.003      -0.381      -0.075
+cat_grocery                                 0.0119      0.075      0.157      0.875      -0.136       0.160
+cat_indian                                 -0.0970      0.075     -1.298      0.195      -0.243       0.050
+cat_middle_eastern                         -0.0456      0.077     -0.592      0.554      -0.196       0.105
+cat_food_trucks                             0.2330      0.081      2.884      0.004       0.075       0.391
+cat_thai                                   -0.0159      0.075     -0.213      0.831      -0.162       0.130
+cat_arts_entertainment                     -0.0866      0.084     -1.026      0.305      -0.252       0.079
+cat_food_delivery_services                 -0.0722      0.079     -0.915      0.360      -0.227       0.083
+cat_caribbean                              -0.1164      0.077     -1.515      0.130      -0.267       0.034
+cat_steakhouses                            -0.1650      0.077     -2.155      0.031      -0.315      -0.015
+cat_soul_food                              -0.2996      0.079     -3.789      0.000      -0.455      -0.145
+cat_korean                                  0.1303      0.076      1.704      0.088      -0.020       0.280
+cat_soup                                   -0.1870      0.081     -2.296      0.022      -0.347      -0.027
+cat_gastropubs                              0.0907      0.082      1.102      0.270      -0.071       0.252
+cat_venues_event_spaces                     0.0030      0.133      0.023      0.982      -0.258       0.264
+cat_french                                  0.0752      0.081      0.926      0.355      -0.084       0.234
+cat_food_stands                             0.0920      0.083      1.109      0.268      -0.071       0.255
+cat_ethnic_food                            -0.3311      0.097     -3.422      0.001      -0.521      -0.141
+cat_wine_bars                              -0.1085      0.088     -1.232      0.218      -0.281       0.064
+cat_halal                                   0.0548      0.086      0.638      0.524      -0.114       0.223
+cat_convenience_stores                     -0.0922      0.088     -1.046      0.296      -0.265       0.081
+cat_latin_american                          0.0908      0.089      1.022      0.307      -0.083       0.265
+cat_comfort_food                            0.0391      0.086      0.453      0.651      -0.130       0.209
+cat_chicken_shop                           -0.1365      0.089     -1.533      0.125      -0.311       0.038
+cat_beer_bar                                0.0938      0.090      1.039      0.299      -0.083       0.271
+cat_ice_cream_frozen_yogurt                 0.0145      0.091      0.159      0.873      -0.164       0.193
+attr_restaurantstakeout_missing             0.0052      0.063      0.082      0.935      -0.119       0.129
+attr_restaurantsdelivery_missing            0.0010      0.050      0.020      0.984      -0.097       0.099
+attr_businessacceptscreditcards            -0.3293      0.036     -9.157      0.000      -0.400      -0.259
+attr_businessacceptscreditcards_missing    -0.3173      0.058     -5.502      0.000      -0.430      -0.204
+attr_outdoorseating                        -0.0070      0.025     -0.280      0.779      -0.056       0.042
+attr_outdoorseating_missing                -0.1056      0.042     -2.501      0.012      -0.188      -0.023
+attr_restaurantsreservations               -0.0172      0.030     -0.579      0.563      -0.075       0.041
+attr_restaurantsreservations_missing        0.0300      0.043      0.704      0.482      -0.054       0.113
+attr_restaurantsgoodforgroups              -0.0004      0.029     -0.015      0.988      -0.058       0.057
+attr_restaurantsgoodforgroups_missing      -0.0618      0.053     -1.176      0.240      -0.165       0.041
+attr_hastv                                 -0.0058      0.027     -0.215      0.830      -0.058       0.047
+attr_hastv_missing                         -0.0308      0.041     -0.746      0.456      -0.112       0.050
+attr_goodforkids                            0.0447      0.032      1.377      0.169      -0.019       0.108
+attr_goodforkids_missing                    0.1641      0.053      3.095      0.002       0.060       0.268
+attr_bikeparking                            0.1293      0.031      4.233      0.000       0.069       0.189
+attr_bikeparking_missing                    0.0542      0.036      1.486      0.137      -0.017       0.126
+attr_caters                                 0.0892      0.027      3.328      0.001       0.037       0.142
+attr_caters_missing                         0.1070      0.032      3.309      0.001       0.044       0.170
+attr_restaurantstableservice                0.0040      0.040      0.102      0.919      -0.074       0.082
+attr_restaurantstableservice_missing       -0.0892      0.036     -2.463      0.014      -0.160      -0.018
+attr_happyhour                             -0.1027      0.048     -2.130      0.033      -0.197      -0.008
+attr_happyhour_missing                     -0.0716      0.041     -1.753      0.080      -0.152       0.008
+attr_wheelchairaccessible                  -0.0884      0.048     -1.823      0.068      -0.183       0.007
+attr_wheelchairaccessible_missing          -0.1438      0.052     -2.773      0.006      -0.245      -0.042
+attr_dogsallowed                            0.1052      0.058      1.811      0.070      -0.009       0.219
+attr_dogsallowed_missing                   -0.0305      0.037     -0.830      0.407      -0.102       0.042
+attr_businessacceptsbitcoin                 0.0239      0.212      0.113      0.910      -0.391       0.439
+attr_businessacceptsbitcoin_missing         0.0097      0.035      0.275      0.783      -0.059       0.079
+attr_corkage                               -0.0252      0.090     -0.281      0.779      -0.201       0.151
+attr_corkage_missing                       -0.0338      0.057     -0.589      0.556      -0.146       0.079
+attr_byob                                   0.0049      0.077      0.064      0.949      -0.147       0.156
+attr_byob_missing                          -0.0254      0.062     -0.413      0.680      -0.146       0.095
+attr_goodfordancing                        -0.0134      0.113     -0.118      0.906      -0.236       0.209
+attr_goodfordancing_missing                -0.0388      0.066     -0.585      0.559      -0.169       0.091
+attr_coatcheck                             -0.0923      0.094     -0.980      0.327      -0.277       0.092
+attr_coatcheck_missing                     -0.0282      0.078     -0.361      0.718      -0.182       0.125
+attr_alcohol_beer_and_wine                 -0.0479      0.063     -0.757      0.449      -0.172       0.076
+attr_alcohol_full_bar                      -0.0956      0.050     -1.894      0.058      -0.194       0.003
+attr_alcohol_none                           0.0042      0.038      0.110      0.912      -0.071       0.079
+attr_restaurantsattire_casual              -0.0779      0.046     -1.706      0.088      -0.167       0.012
+attr_restaurantsattire_dressy               0.0146      0.091      0.160      0.873      -0.165       0.194
+attr_wifi_free                             -0.0585      0.035     -1.684      0.092      -0.127       0.010
+attr_wifi_no                               -0.0586      0.033     -1.769      0.077      -0.123       0.006
+attr_noiselevel_average                     0.0202      0.035      0.574      0.566      -0.049       0.089
+attr_noiselevel_loud                       -0.0938      0.053     -1.774      0.076      -0.197       0.010
+attr_noiselevel_quiet                       0.0627      0.041      1.518      0.129      -0.018       0.144
+attr_noiselevel_very_loud                  -0.3592      0.074     -4.833      0.000      -0.505      -0.213
+attr_byobcorkage_no                        -0.1702      0.055     -3.084      0.002      -0.278      -0.062
+attr_byobcorkage_yes_free                  -0.1215      0.061     -1.981      0.048      -0.242      -0.001
+attr_smoking_no                            -0.0739      0.084     -0.881      0.378      -0.238       0.090
+attr_smoking_outdoor                       -0.0193      0.104     -0.185      0.853      -0.224       0.185
+attr_businessparking_garage                -0.0646      0.043     -1.490      0.136      -0.150       0.020
+attr_businessparking_street                 0.1702      0.026      6.578      0.000       0.119       0.221
+attr_businessparking_validated              0.0168      0.076      0.222      0.825      -0.132       0.166
+attr_businessparking_lot                   -0.0397      0.032     -1.252      0.211      -0.102       0.022
+attr_businessparking_valet                 -0.0187      0.082     -0.227      0.820      -0.180       0.142
+attr_ambience_touristy                     -0.1035      0.136     -0.760      0.447      -0.371       0.164
+attr_ambience_hipster                       0.0266      0.063      0.421      0.674      -0.097       0.150
+attr_ambience_romantic                      0.0500      0.076      0.654      0.513      -0.100       0.200
+attr_ambience_divey                         0.0447      0.070      0.640      0.522      -0.092       0.182
+attr_ambience_intimate                      0.1288      0.069      1.875      0.061      -0.006       0.264
+attr_ambience_trendy                        0.0567      0.046      1.220      0.222      -0.034       0.148
+attr_ambience_upscale                      -0.0660      0.138     -0.479      0.632      -0.336       0.204
+attr_ambience_classy                        0.0536      0.035      1.513      0.130      -0.016       0.123
+attr_ambience_casual                        0.0504      0.029      1.763      0.078      -0.006       0.106
+attr_goodformeal_dessert                    0.0272      0.071      0.381      0.703      -0.113       0.167
+attr_goodformeal_latenight                 -0.0796      0.054     -1.477      0.140      -0.185       0.026
+attr_goodformeal_lunch                      0.0134      0.032      0.416      0.677      -0.050       0.076
+attr_goodformeal_dinner                     0.0906      0.034      2.698      0.007       0.025       0.156
+attr_goodformeal_brunch                     0.0389      0.056      0.689      0.491      -0.072       0.150
+attr_goodformeal_breakfast                  0.0419      0.058      0.721      0.471      -0.072       0.156
+attr_music_dj                              -0.1167      0.133     -0.877      0.380      -0.377       0.144
+attr_music_background_music                 0.0842      0.146      0.577      0.564      -0.202       0.370
+attr_music_jukebox                          0.3045      0.116      2.614      0.009       0.076       0.533
+attr_music_live                            -0.1346      0.086     -1.565      0.118      -0.303       0.034
+attr_music_video                         8.468e-18    6.9e-17      0.123      0.902   -1.27e-16    1.44e-16
+attr_music_karaoke                          0.0259      0.303      0.086      0.932      -0.567       0.619
+attr_bestnights_monday                      0.0674      0.110      0.614      0.539      -0.148       0.283
+attr_bestnights_tuesday                     0.0915      0.098      0.934      0.350      -0.101       0.284
+attr_bestnights_friday                      0.0450      0.075      0.600      0.549      -0.102       0.192
+attr_bestnights_wednesday                   0.0252      0.079      0.318      0.751      -0.130       0.180
+attr_bestnights_thursday                    0.0487      0.073      0.670      0.503      -0.094       0.191
+attr_bestnights_sunday                      0.0809      0.109      0.740      0.459      -0.133       0.295
+attr_bestnights_saturday                   -0.0749      0.072     -1.041      0.298      -0.216       0.066
+has_hours                                   0.3492      0.131      2.662      0.008       0.092       0.606
+open_monday                                -0.1837      0.033     -5.569      0.000      -0.248      -0.119
+open_tuesday                               -0.1081      0.043     -2.510      0.012      -0.193      -0.024
+open_wednesday                             -0.0667      0.070     -0.949      0.343      -0.205       0.071
+open_thursday                              -0.0955      0.110     -0.866      0.387      -0.312       0.121
+open_friday                                 0.2230      0.139      1.600      0.110      -0.050       0.496
+open_saturday                               0.0849      0.135      0.631      0.528      -0.179       0.349
+open_sunday                                -0.1981      0.034     -5.889      0.000      -0.264      -0.132
+open_weekend                               -0.0691      0.145     -0.477      0.633      -0.353       0.215
+price_range_missing                         0.3313      0.043      7.761      0.000       0.248       0.415
+==============================================================================
+Omnibus:                      108.833   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              133.381
+Skew:                          -0.307   Prob(JB):                     1.09e-29
+Kurtosis:                       3.553   Cond. No.                     3.55e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.65e-24. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

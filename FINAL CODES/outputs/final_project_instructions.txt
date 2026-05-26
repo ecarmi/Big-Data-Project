@@ -1,0 +1,95 @@
+BUSN 20800 Big Data Final Project Instructions - Spring 2026
+
+
+Project Requirements
+In the project you will form groups of up to 4 students. You will
+  1. Construct or download an interesting multimodal dataset. Multimodal means the dataset
+     should include at least one other type of data (text, image, network, sensor etc.) in
+     addition to numerical/categorical data. You may use APIs, government data, financial
+     data, or any other data sources of interest. For example, you could combine a database
+     of all of Donald Trump’s tweets since 2017 with financial data on the US dollar from
+     FRED-MD.
+  2. Clean your data: deal with missing values, extract features, and combine different data
+     sources.
+  3. Extract insights from your data using at least one unsupervised learning method, such as
+     clustering, sentiment analysis, or dimension reduction. For example, you could analyze the
+     sentiment of Trump’s tweets over time, and describe how the sentiment changed between
+     his first and second presidency.
+  4. Use multiple supervised learning methods and compare their performance on at least one
+     prediction task. Use appropriate out-of-sample metrics. Always report the performance
+     of at least one very simple model as a baseline, such as a version of linear or logistic
+     regression. Provide some explanation and intuition on why certain methods perform well.
+     For example, you could use aggregated features from Trump tweets to predict monthly (or
+     daily) changes in the US dollar index.
+You are encouraged to use both methods that we learned in class, as well as methods that go
+in some way beyond what we learned in class (e.g. different neural network architectures).
+You are encouraged to choose data and research questions that interest you. The project
+description includes an example project using Trump tweets and FRED-MD data; if you have
+trouble coming up with your own idea for the project, you are welcome to implement a version
+of this project.
+
+Details on Project Components
+Your project grade will be composed of the following. For all Gradescope submissions below,
+only one submission per group is needed, but you must add all group members to the submission.
+10% Project Plan. By Wednesday May 20th at 11:59 pm, submit a 1 page project
+    outline on Gradescope. This should include a rough plan for the project, a few summary
+    statistics from data collected for the project, and the results from at least one linear
+    regression on the data. To receive full points, the group must also have signed up for a
+    presentation slot before Wednesday May 20th.
+50% Paper. A write-up of minimum 4 pages and maximum 8 pages, describing concisely
+    and clearly your dataset, the models you used to analyze the dataset, and a summary of
+    your results. This is due on Gradescope on Tuesday, May 26th at 11:59 pm. The
+    writeup must include an appendix explaining each group member’s contribution.
+10% Code. A zip file of the code used to generate the results for your project, due on Grade-
+    scope on Tuesday, May 26th at 11:59 pm. Do not submit data with your code.
+30% Presentation. A 10 minute presentation to Prof. Munro on Wednesday, May 27th
+    from 1pm - 5pm: roughly 5 minutes of presentation, followed by Q&A about your results
+    and code. In the case of final exam conflicts, at most 2 group members may be absent
+
+
+
+                                              1
+BUSN 20800 Big Data Final Project Instructions - Spring 2026
+
+
+     from the presentation. Sign-up for presentations will be via a Google sheet distributed
+     via Canvas.
+
+Honor Code
+  • Using AI tools to scrape and clean data, to generate features, to brainstorm and design
+    your project, and to write code for your project is acceptable and encouraged. However,
+    you must be able to explain what each line of code does, and you should not use AI to
+    generate your written report.
+  • Do not use a project that you have written for another class.
+  • Data scraping is often not viable for large websites like Zillow, Redfin, Amazon, etc; it
+    may violate their Terms of Service and can lead to account or IP bans, and in some rare
+    cases, legal action. If you scrape, please be careful, do not send too many requests too
+    quickly, and avoid violating Terms of Service. Given the limited time available for the
+    project, using pre-existing datasets or APIs may be preferred.
+
+Useful Resources
+  • Trump Tweets Data [Link] and FRED-MD Data [Link]
+  • Amazon Reviews Dataset [Link]
+  • Airbnb Dataset (e.g. for Chicago) [Link]
+  • HuggingFace text models [Link]
+  • Polymarket API [Link] and Kalshi API [Link]
+  • UChicago Libraries data guide [Link]
+  • Reddit API [Link]
+  • TabFPN for tabular data: [Link]
+
+Suggestions
+  • Always run analysis on a very small and clean subset of your dataset before trying to
+    produce results on a larger dataset. For the final version, I suggest using a dataset of
+    moderate size (e.g. at most a few hundred MB for text and numerical data).
+  • Cleaning and preparing data takes more time than you might expect. You should collect
+    data and run some simple models from the beginning of the class well in advance of the
+    May 20th deadline for the project outline.
+  • To use AI tools effectively, break a large task into many small tasks, and get help with
+    one small task at a time. Verify the correctness of each subtask before moving on to the
+    next one.
+
+
+
+
+                                               2
+

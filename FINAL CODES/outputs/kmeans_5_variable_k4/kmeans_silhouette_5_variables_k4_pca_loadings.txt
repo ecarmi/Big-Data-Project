@@ -1,0 +1,13 @@
+PCA loadings for 5-variable K-means 2D graph
+Input file: outputs\kmeans_5_variable_k4\kmeans_silhouette_5_variables_k4_clustered.csv
+Features: log_review_count, avg_tip_compliments, checkin_count, photo_count, inside_photo_share
+PC1 explained variance: 0.43523
+PC2 explained variance: 0.19989
+Total explained variance: 0.63512
+
+           variable  PC1_loading  PC2_loading  PC1_abs_loading  PC2_abs_loading
+   log_review_count      0.57067     -0.00197          0.57067          0.00197
+avg_tip_compliments      0.02712      0.99869          0.02712          0.99869
+      checkin_count      0.56434     -0.03623          0.56434          0.03623
+        photo_count      0.52990     -0.02413          0.52990          0.02413
+ inside_photo_share      0.27263      0.02667          0.27263          0.02667
